@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="css/styleRegistration.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body style="background-image: linear-gradient(90deg, #5D001E , #9A1750); ">
+    <div class="sign-up-page container d-flex justify-content-center align-items-center" style="height: 100vh">
+        <form class="row form-container p-5 border rounded rounded-5 shadow-lg fade-in-top" id="formLoading"
+            style="background-color: white;">
+            <h1 class="fs-1 mb-4 d-inline-block title-animation text-center">Registration</h1>
+            <div class="form-floating mb-3 d-inline-block col-6">
+                <input type="text" class="form-control" id="firstNameReg" placeholder="First Name" required>
+                <label for="firstNameReg" class="ms-3 text-capitalize">first name</label>
+            </div>
+
+            <div class="form-floating mb-3 d-inline-block col-6">
+                <input type="text" class="form-control" id="lastNameReg" placeholder="Last Name" required>
+                <label for="lastNameReg" class="ms-3 text-capitalize">last name</label>
+            </div>
+
+            <div class="form-floating mb-3 d-inline-block">
+                <input type="text" class="form-control" id="emailReg" placeholder="Email" required>
+                <label for="emailReg" class="ms-3 text-capitalize">email</label>
+            </div>
+
+            <div class="form-floating mb-3 d-inline-block">
+                <input type="password" class="form-control" id="passwordReg" placeholder="Password" required>
+                <label for="passwordReg" class="ms-3 text-capitalize">password</label>
+            </div>
+
+            <div class="input-group mb-3 col-6">
+                <button type="button" class="btn col-12 " id="buttonReg" style="background: #9A1750; color: white" onclick="redirectToLogin()">Create
+                    Account</button>
+            </div>
+            <div class="mb-3 col-6">
+                <span>Already have an account ?</span>
+                <a href="login.html" class="link link-primary text-capitalize">login</a>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="js/scriptIndex.js"></script>
+</body>
+
+</html>

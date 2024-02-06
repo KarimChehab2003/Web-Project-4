@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/styleIndex.css">
+    <title>Online Shopping Website</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" style="background-color: #5D001E; color: white">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand text-white" id="goToHome" href="index.html">Online Shopping</a>
+            <p id="visitorName" class="d-none mb-0 fw-semibold fs-5"></p>
+            <form class="d-flex">
+                <div id="navLoggedOff" class="d-none">
+                    <a href="login.html">
+                        <button type="button" class="btn btn-success mx-2">Login</button>
+                    </a>
+                    <a href="registration.html">
+                        <button type="button" class="btn btn-success mx-2">Register</button>
+                    </a>
+                </div>
+                <div id="navLoggedIn" class="d-none">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <sub id="cartQuantity">0</sub>
+                    <div class="dropdown d-inline">
+                        <button class="btn dropdown-toggle text-white" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                            aria-expanded="false"></button>
+                        <ul id="cartItems" class="dropdown-menu dropdown-menu-end p-2" style="width: 250px;">
+                            <li><a class="dropdown-item text-center text-capitalize" id="goToProducts" href="#">view all products</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                        </ul>
+                    </div>
+                    <button type="button" id="logoutBtn" class="btn btn-danger mx-2">Logout</button>
+
+                </div>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <section id="searchBarSection" style="background-color: white;">
+        <div class="container-fluid my-5">
+            <form class="row mx-5">
+                <div class="col">
+                    <select class="form-select text-capitalize" id="searchOptions">
+                        <option class="text-capitalize" hidden>Search Type</option>
+                        <option class="text-capitalize" value="1">search by name</option>
+                        <option class="text-capitalize" value="2">search by category</option>
+                    </select>
+                </div>
+
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Search" id="searchBar">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <div id="productsGridSection" style="width: 100%; ">
+        <section style="width:70%;" class="mx-auto my-5">
+            <div class="row row-cols-1 row-cols-md-3 g-4" style="background-color: white;">
+                <div class="col">
+                    <div class="card h-100 ">
+                        <img src="img/camera.jpg" class="card-img-top" alt="camera photo">
+                        <div class="card-body">
+                            <h5 class="card-title">Camera</h5>
+                            <p class="card-text">Price: 80$</p>
+                            <p class="card-text">Category: Electronics</p>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-primary text-capitalize m-3 addToCart">add to cart</button>
+                            <a class="likeButton" href="#"><i class="fa-solid fa-heart float-end m-3 fs-3 text-secondary"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/coffeebeans.jpg" class="card-img-top" alt="coffeebeans">
+                        <div class="card-body">
+                            <h5 class="card-title">Coffee Beans</h5>
+                            <p class="card-text">Price: 10$</p>
+                            <p class="card-text">Category: Food</p>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-primary text-capitalize m-3 addToCart">add to cart</button>
+                            <a class="likeButton" href="#"><i class="fa-solid fa-heart float-end m-3 fs-3 text-secondary"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/iphone.jpg" class="card-img-top" alt="iphone photo">
+                        <div class="card-body">
+                            <h5 class="card-title">iPhone</h5>
+                            <p class="card-text">Price: 100$</p>
+                            <p class="card-text">Category: Electronics</p>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-primary text-capitalize m-3 addToCart">add to cart</button>
+                            <a class="likeButton" href="#"><i class="fa-solid fa-heart float-end m-3 fs-3 text-secondary"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/laptop.jpg" class="card-img-top" alt="laptop photo">
+                        <div class="card-body">
+                            <h5 class="card-title">Laptop</h5>
+                            <p class="card-text">Price: 150$</p>
+                            <p class="card-text">Category: Electronics</p>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-primary text-capitalize m-3 addToCart">add to cart</button>
+                            <a class="likeButton" href="#"><i class="fa-solid fa-heart float-end m-3 fs-3 text-secondary"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/lipstick.jpg" class="card-img-top" alt="lipstick photo">
+                        <div class="card-body">
+                            <h5 class="card-title">Lipstick</h5>
+                            <p class="card-text">Price: 30$</p>
+                            <p class="card-text">Category: Fashion</p>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-primary text-capitalize m-3 addToCart">add to cart</button>
+                            <a class="likeButton" href="#"><i class="fa-solid fa-heart float-end m-3 fs-3 text-secondary"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/perfume.jpg" class="card-img-top" alt="perfume photo">
+                        <div class="card-body">
+                            <h5 class="card-title">Perfume</h5>
+                            <p class="card-text">Price: 30$</p>
+                            <p class="card-text">Category: Fashion</p>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-primary text-capitalize m-3 addToCart">add to cart</button>
+                            <a class="likeButton" href="#"><i class="fa-solid fa-heart float-end m-3 fs-3 text-secondary"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/chilipepper.jpg" class="card-img-top" alt="chilipepper photo">
+                        <div class="card-body">
+                            <h5 class="card-title">Chili Pepper</h5>
+                            <p class="card-text">Price: 5$</p>
+                            <p class="card-text">Category: Food</p>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-primary text-capitalize m-3 addToCart">add to cart</button>
+                            <a class="likeButton" href="#"><i class="fa-solid fa-heart float-end m-3 fs-3 text-secondary"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/toy.jpg" class="card-img-top" alt="toy photo">
+                        <div class="card-body">
+                            <h5 class="card-title">Ice Cream Toy</h5>
+                            <p class="card-text">Price: 5$</p>
+                            <p class="card-text">Category: Games</p>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-primary text-capitalize m-3 addToCart">add to cart</button>
+                            <a class="likeButton" href="#"><i class="fa-solid fa-heart float-end m-3 fs-3 text-secondary"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/speakers.jpg" class="card-img-top" alt="speakers photo">
+                        <div class="card-body">
+                            <h5 class="card-title">Speakers</h5>
+                            <p class="card-text">Price: 50$</p>
+                            <p class="card-text">Category: Electronics</p>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-primary text-capitalize m-3 addToCart">add to cart</button>
+                            <a class="likeButton" href="#"><i class="fa-solid fa-heart float-end m-3 fs-3 text-secondary"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <section id="addedProducts" class="my-3 d-none" style="width:100%;">
+        <div class="mx-auto row row-cols-1 row-cols-md-3 g-4" id="productsContainer" style="width:70%">
+            
+        </div>
+        <p id="totalPrice" class="text-center fs-5 fw-semibold my-4"></p>
+    </section>
+
+    <section id="likedProducts" class="my-3 d-none" style="width:100%;">
+        <h2 class="text-capitalize text-center fs-3">favorite products</h2>
+        <div id="favoriteProducts" class="mx-auto row row-cols-1 row-cols-md-3 g-4 " style="width: 70%">
+
+        </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/scriptIndex.js"></script>
+</body>
+
+</html>
